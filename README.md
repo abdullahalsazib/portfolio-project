@@ -52,6 +52,10 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
+https://ng-17-git-project.netlify.app/
+https://ng-17-git-project.netlify.app/
+https://ng-17-git-project.netlify.app/
+
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources

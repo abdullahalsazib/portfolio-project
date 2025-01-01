@@ -59,22 +59,22 @@ You can preview the live website by clicking the link below:
    npm install -g @angular/cli
 
 
-3. **Navigate to the Project Directory:
+3. **Navigate to the Project Directory**:
    ```bash
    cd ng-17-portfolio
-4. **Install Dependencies:
+4. **Install Dependencies**:
    ```bash
    npm install
-4. **Run the Development Server:
+4. **Run the Development Server**:
    ```bash
    ng serve
-5. **Access the Application: Open your browser and visit:
+5. **Access the Application: Open your browser and visit**:
    ```bash
    ng serve http://localhost:4200
 
 
-### **🛠️ Contributing
-## *Features You Can Contribute To
+### **🛠️ Contributing**
+## *Features You Can Contribute To**
 - **Animations**: Add new custom animations or modify existing ones to enhance the user experience.
 - **Dark Mode**: Contribute by adding a dark mode toggle with smooth transitions.
 - **Blog Integration**: Add a blog section that pulls data from a headless CMS like Contentful or Strapi.
@@ -92,25 +92,25 @@ Project Showcase
 
 Contact Form
 
-### **📝 Roadmap
+### **📝 Roadmap**
 v1.0.0: Initial launch with basic personal information and project showcase.
 v1.1.0: Add contact form integration, dark mode, and animations.
 v2.0.0: Integrate a blog section and improve the mobile-first experience.
 v2.5.0: Add multi-language support and enhance SEO for better ranking.
-### **📜 License
+### **📜 License**
 This repository is licensed under the MIT License. See the LICENSE file for details.
 
-### **📢 How to Contribute
-## **Fork the Repository.
-1. **Create a New Branch:
+### **📢 How to Contribute**
+## **Fork the Repository.**
+1. **Create a New Branch:**
     ```bash
     git checkout -b feature/your-feature
 
-2. **Commit Your Changes:
+2. **Commit Your Changes:**
     ```bash
     git commit -m 'Add new feature'
 
-3. **Push to the Branch:
+3. **Push to the Branch:**
     ```bash
     git push origin feature/your-feature
     

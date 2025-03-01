@@ -1,6 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 /* tailwindcss root */
 @import "tailwindcss";
 
-.priamry_btn {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none hover:bg-blue-700 transition-colors duration-300 ease-in-out cursor-pointer hover:shadow-md hover:scale-105 hover:transition-transform;
+* {
+  /* font-family: "Inter", sans-serif; */
+}
+/* for linux os theme */
+@theme {
+  --color-os-white: #fafafa;
+  --color-os-black: #242424;
+  --color-os-black-50: #303030;
+  --radius-os-border: 12px;
+  --border-os-black: #4F4F4F;
+  
+  --font-os-family: "Inter", sans-serif;
+  --shadow-os-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  /* --color-os-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+     --color-os-shadow_hover: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+     --color-os-shadow_active: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.3); */
+}
+
+.c-conter {
+  @apply flex items-center justify-center;
+}
+
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
 }

@@ -299,7 +299,8 @@ const Contact: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${social.color} hover:opacity-90 text-white rounded-md p-3 flex items-center transition`}
+                  style={{textDecoration: "none"}}
+                  className={`${social.color} hover:opacity-90 text-white! rounded-md p-3 flex items-center transition`}
                 >
                   <div className="mr-3">{social.icon}</div>
                   <span>{social.name}</span>

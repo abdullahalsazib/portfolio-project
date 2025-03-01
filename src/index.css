@@ -36,3 +36,25 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Scrollbar for Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of scrollbar */
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Dark track */
+  border-radius: 10px;
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #2f2b8c; /* Primary color */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4338ca;
+}

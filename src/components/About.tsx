@@ -10,7 +10,7 @@ const About: React.FC = () => {
             <h2 className="text-2xl font-bold mb-4 text-blue-400">Profile</h2>
             <div className="space-y-4">
               <div className="flex items-center">
-                <div className="bg-yellow-600 p-2 rounded mr-3">
+                <div className="bg-blue-600 p-2 rounded mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -39,7 +39,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="flex items-center">
-                <div className="bg-yellow-600 p-2 rounded mr-3">
+                <div className="bg-blue-600 p-2 rounded mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -62,7 +62,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="flex items-center">
-                <div className="bg-yellow-600 p-2 rounded mr-3">
+                <div className="bg-blue-600 p-2 rounded mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -85,7 +85,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="flex items-center">
-                <div className="bg-yellow-600 p-2 rounded mr-3">
+                <div className="bg-blue-600 p-2 rounded mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -111,7 +111,7 @@ const About: React.FC = () => {
         </div>
 
         <div className="md:w-2/3 md:pl-6">
-          <h1 className="text-4xl font-bold text-yellow-500 mb-4">
+          <h1 className="text-4xl font-bold text-blue-500 mb-4">
             Hi, I am Abdullah Al Sazib
           </h1>
 
@@ -153,8 +153,8 @@ const About: React.FC = () => {
 
           <p className="mb-6">
             My ultimate goal is to become proficient in{" "}
-            <span className="text-yellow-500">ethical hacking</span> and
-            <span className="text-yellow-500"> cybersecurity</span>, leveraging
+            <span className="text-blue-500">ethical hacking</span> and
+            <span className="text-blue-500"> cybersecurity</span>, leveraging
             my coding skills to create robust and secure systems. I'm always
             eager to learn new things and contribute to open-source projects.
           </p>
@@ -163,9 +163,9 @@ const About: React.FC = () => {
             <h3 className="text-xl font-bold mb-2">💬 Fun Fact:</h3>
             <p>
               I'm a huge fan of{" "}
-              <span className="text-yellow-500">Jack Sparrow</span> 🏴‍☠️ (Johnny
+              <span className="text-blue-500">Jack Sparrow</span> 🏴‍☠️ (Johnny
               Depp) and love watching the{" "}
-              <span className="text-yellow-500">Pirates of the Caribbean</span>{" "}
+              <span className="text-blue-500">Pirates of the Caribbean</span>{" "}
               movies! 🎬
             </p>
           </div>

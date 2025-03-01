@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
         "A modern portfolio website built with Angular 17 featuring responsive design and animations.",
       tech: ["Angular", "TypeScript", "CSS", "HTML"],
       github: "https://github.com/abdullahalsazib/ng-17-portfolio",
-      image: "/api/placeholder/400/300",
+      image: "https://i.ibb.co.com/ZpXz7HSJ/image.png",
     },
     {
       title: "C Modules",
@@ -75,7 +75,8 @@ const Projects: React.FC = () => {
         "A comprehensive collection of C programming modules covering key topics and algorithms.",
       tech: ["C", "Data Structures", "Algorithms"],
       github: "https://github.com/abdullahalsazib/C-Modules",
-      image: "/api/placeholder/400/300",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSrEQ1Lab7lq6sh17bSTjtVAWAeY-Y8hSV3A&s",
     },
     {
       title: "CPP Modules",
@@ -83,7 +84,8 @@ const Projects: React.FC = () => {
         "A set of C++ modules including object-oriented programming concepts and algorithms.",
       tech: ["C++", "OOP", "Data Structures"],
       github: "https://github.com/abdullahalsazib/CPP-Modules",
-      image: "/api/placeholder/400/300",
+      image:
+        "https://cdn.hackr.io/uploads/posts/large/1604990363AtwCbeT3ma.png",
     },
     {
       title: "E-Commerce Application",
@@ -91,7 +93,15 @@ const Projects: React.FC = () => {
         "A fully functional e-commerce application with product listings, cart functionality, and checkout.",
       tech: ["React", "JavaScript", "CSS", "API Integration"],
       github: "https://github.com/abdullahalsazib/e-commerce",
-      image: "/api/placeholder/400/300",
+      image: "https://i.ibb.co.com/S4ZrrfGY/image.png",
+    },
+    {
+      title: "E-Commerce Application - Reat (TSX)",
+      description:
+        "A fully functional e-commerce application with product listings, cart functionality, and checkout.",
+      tech: ["React", "TypeScript", "Tailwindcss", "API Integration", "GoLang"],
+      github: "https://github.com/abdullahalsazib/e-com-fontend-reactTsx",
+      image: "https://i.ibb.co.com/zWvScn4h/image.png",
     },
   ];
 
@@ -99,7 +109,7 @@ const Projects: React.FC = () => {
     <div className="bg-gray-800 rounded-lg p-6 shadow-lg overflow-y-auto max-h-[80vh]">
       <h2 className="text-3xl font-bold mb-6 text-blue-400">📝 My Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

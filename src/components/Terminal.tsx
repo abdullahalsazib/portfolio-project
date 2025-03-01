@@ -539,7 +539,7 @@ const Terminal: React.FC = () => {
       ))}
 
       <div className="flex mt-2">
-        <span className="text-green-400">visitor@abdullah:~$</span>
+        <span className="text-green-400">root@abdullah:~$</span>
         <input
           type="text"
           value={command}

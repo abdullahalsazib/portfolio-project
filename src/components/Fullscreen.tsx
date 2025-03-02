@@ -28,7 +28,7 @@ const FullScreenToggle = () => {
   return (
     <button
       onClick={toggleFullScreen}
-      className=" cursor-pointer px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2 fixed rotate-40 top-20 right-39"
+      className=" cursor-pointer px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2 fixed rotate-90 top-40 -right-10 xl:right-20 z-0 md:z-50"
     >
       {isFullScreen ? <IoContract /> : <IoExpand />}
       {isFullScreen ? "Exit Fullscreen" : "Enter Fullscreen"}

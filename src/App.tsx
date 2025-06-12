@@ -43,7 +43,7 @@ const App: React.FC = () => {
             (item) => (
               <button
                 key={item}
-                className={`block w-full md:w-auto px-4 py-2 md:py-1 rounded text-center ${
+                className={`block cursor-pointer w-full md:w-auto px-4 py-2 md:py-1 rounded text-center ${
                   activeWindow === item
                     ? "bg-gray-700"
                     : "bg-gray-800 hover:bg-gray-700"
@@ -61,7 +61,7 @@ const App: React.FC = () => {
           <a
             href="/cv.pdf"
             download
-            className="block text-center md:inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition"
+            className=" text-[#fff] text-center md:inline-block bg-blue-400 hover:bg-blue-700 px-4 py-2 rounded transition"
           >
             Download CV
           </a>

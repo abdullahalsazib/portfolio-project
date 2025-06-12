@@ -57,11 +57,11 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-sm text-gray-400">Email</div>
-                  <div>contact@abdullah.dev</div>
+                  <div>mdsazibhossin2021@gmail.com</div>
                 </div>
               </div>
 
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <div className="bg-blue-600 p-2 rounded mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const About: React.FC = () => {
                   <div className="text-sm text-gray-400">Date of Birth</div>
                   <div>1998</div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-center">
                 <div className="bg-blue-600 p-2 rounded mr-3">
@@ -154,9 +154,9 @@ const About: React.FC = () => {
           <p className="mb-6">
             My ultimate goal is to become proficient in{" "}
             <span className="text-blue-500">ethical hacking</span> and
-            <span className="text-blue-500"> cybersecurity</span>, leveraging
-            my coding skills to create robust and secure systems. I'm always
-            eager to learn new things and contribute to open-source projects.
+            <span className="text-blue-500"> cybersecurity</span>, leveraging my
+            coding skills to create robust and secure systems. I'm always eager
+            to learn new things and contribute to open-source projects.
           </p>
 
           <div className="p-4 bg-gray-700 rounded-lg">

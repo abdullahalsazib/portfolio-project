@@ -1,59 +1,77 @@
-# MyAngularApp
+# Portfolio Project
+Description
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+This is a personal portfolio website built with Angular 19.0.0. It showcases my projects, skills, and experiences using a modern, responsive design with smooth navigation and animations, highlighting expertise with the latest Angular framework.
 
-## Development server
+<a href="https://abdullahalsazib.vercel.app">Live Demo</a>
 
-To start a local development server, run:
+Check out the live version of the portfolio here:
+Live Demo <a href="https://abdullahalsazib.vercel.app">Link</a>
 
-```bash
-ng serve
-```
+(Update if your live deployment URL is different)
+Technologies Used
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    Angular 19.0.0
 
-## Code scaffolding
+    TypeScript
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+    HTML5 & CSS3 
 
-```bash
-ng generate component component-name
-```
+    RxJS
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    Angular CLI
 
-```bash
-ng generate --help
-```
+    Git & GitHub Pages (for deployment)
 
-## Building
+Installation
 
-To build the project run:
+  Clone the repository:
 
-```bash
-ng build
-```
+     git clone https://github.com/abdullahalsazib/portfolio-project.git
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+  Navigate into the project directory:
+  
+    cd portfolio-project
+  
+  Install dependencies:
+  
+      npm install
+  
+  Running the Project Locally
+  
+  Start the development server with:
+  
+  ng serve
 
-## Running unit tests
+Open http://localhost:4200 in your browser. The app will reload automatically on code changes.
+Building for Production
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To build the optimized production bundle, run:
 
-```bash
-ng test
-```
+ng build --configuration production
 
-## Running end-to-end tests
+The output will be in the dist/portfolio-project folder, ready for deployment.
+Folder Structure
 
-For end-to-end (e2e) testing, run:
+    portfolio-project/
+    ├── .vscode/                 # VSCode workspace settings
+    ├── public/                  # Static assets (served as-is)
+    ├── src/                     # Angular source files
+    │   ├── app/                 # Angular modules, components, services, etc.
+    │   ├── assets/              # Images, fonts, and other static files
+    │   ├── environments/        # Environment-specific configuration files
+    │   ├── styles/              # Global styles (Tailwind, SCSS, CSS)
+    │   ├── index.html           # Main HTML file
+    │   └── main.ts              # Angular app bootstrap
+    ├── .editorconfig            # Editor configuration
+    ├── .gitignore               # Git ignore rules
+    ├── angular.json             # Angular CLI configuration
+    ├── netlify.toml             # Netlify deployment configuration
+    ├── package.json             # Node dependencies and scripts
+    ├── package-lock.json        # Locked versions of dependencies
+    ├── tailwind.config.js       # Tailwind CSS configuration
+    ├── tsconfig.app.json        # TypeScript config for app code
+    ├── tsconfig.json            # Base TypeScript config
+    ├── tsconfig.spec.json       # TypeScript config for tests
+    ├── README.md                # Project documentation
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

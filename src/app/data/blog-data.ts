@@ -29,6 +29,33 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     featured: true,
   },
+  {
+    id: 1,
+    title: 'up comming....',
+    excerpt: 'up comming...',
+    content: `
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Modern Architecture</li>
+        <li>Responsive Design</li>
+        <li>Performance Optimization</li>
+        <li>Security Best Practices</li>
+      </ul>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    `,
+    image: 'https://picsum.photos/800/600?random=1',
+    category: 'Projects',
+    tags: ['Web Development', 'JavaScript', 'Angular'],
+    author: {
+      name: 'Abdullah Al Sazib',
+      avatar: 'https://i.ibb.co/ZHMMHQB/20241031-181937.jpg',
+      role: 'Developer',
+    },
+    date: 'March 15, 2024',
+    readTime: '5 min read',
+    featured: true,
+  },
 ];
 
 export const categories: Category[] = [
@@ -99,8 +126,8 @@ const dummy = [
     category: 'Design',
     tags: ['UI Design', 'Neomorphism', 'Trends'],
     author: {
-      name: 'Sophie Bernard',
-      avatar: 'https://picsum.photos/100/100?random=12',
+      name: 'Abdullah Al Sazib',
+      avatar: 'https://i.ibb.co/ZHMMHQB/20241031-181937.jpg',
       role: 'UI/UX Designer',
     },
     date: 'March 4, 2024',

@@ -3,7 +3,7 @@ import { NavLinkInf } from '../interfaces/nav.interface';
 export const NavLink: NavLinkInf[] = [
   {
     title: '/',
-    link: '',
+    link: '/home',
   },
   {
     title: "project's",

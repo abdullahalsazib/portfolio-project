@@ -1,18 +1,23 @@
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavLinkInf } from '../../interfaces/nav.interface';
+import { NavLink } from '../../data/nav-data';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, NgIf, NgClass, RouterLinkActive],
+  imports: [RouterLink, NgIf, NgClass, RouterLinkActive, NgFor],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
   isMobileMenuOpen = false;
   isSettingsMenuOpen = false;
-  isDarkMode = false;
+  isDarkMode = true;
+
+
+  navlink: NavLinkInf[] = NavLink
 
   constructor() {
     // Check if user previously set a theme preference

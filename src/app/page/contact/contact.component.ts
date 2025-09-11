@@ -12,14 +12,15 @@ interface ContactForm {
   selector: 'app-contact',
   imports: [FormsModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
+  email: string = 'mdsazibhossin2021@gmail.com';
   formData: ContactForm = {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   };
 
   onSubmit() {

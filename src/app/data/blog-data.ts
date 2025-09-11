@@ -4,7 +4,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: 'Building Modern Web Applications',
-    excerpt: 'Exploring the latest trends and technologies in web development...',
+    excerpt:
+      'Exploring the latest trends and technologies in web development...',
     content: `
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <h2>Key Features</h2>
@@ -22,16 +23,41 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'John Doe',
       avatar: 'https://picsum.photos/100/100?random=1',
-      role: 'Senior Developer'
+      role: 'Senior Developer',
     },
     date: 'March 15, 2024',
     readTime: '5 min read',
-    featured: true
+    featured: true,
   },
+];
+
+export const categories: Category[] = [
+  {
+    name: 'All',
+    class: 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200',
+  },
+  {
+    name: 'Projects',
+    class:
+      'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300',
+  },
+  {
+    name: 'Tech',
+    class:
+      'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300',
+  },
+  {
+    name: 'Design',
+    class: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300',
+  },
+];
+
+const dummy = [
   {
     id: 11,
     title: 'Neural Networks in Browser',
-    excerpt: 'Running machine learning models directly in the browser using TensorFlow.js...',
+    excerpt:
+      'Running machine learning models directly in the browser using TensorFlow.js...',
     content: `
       <p>Explore the possibilities of client-side AI processing with TensorFlow.js.</p>
       <h2>Implementation Guide</h2>
@@ -49,15 +75,16 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Dr. Maria Torres',
       avatar: 'https://picsum.photos/100/100?random=11',
-      role: 'AI Researcher'
+      role: 'AI Researcher',
     },
     date: 'March 5, 2024',
-    readTime: '12 min read'
+    readTime: '12 min read',
   },
   {
     id: 12,
     title: 'Neomorphic Design Trends',
-    excerpt: 'Exploring the evolution of soft UI and its impact on modern interfaces...',
+    excerpt:
+      'Exploring the evolution of soft UI and its impact on modern interfaces...',
     content: `
       <p>Discover how neomorphism is shaping the future of UI design.</p>
       <h2>Design Elements</h2>
@@ -74,15 +101,16 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Sophie Bernard',
       avatar: 'https://picsum.photos/100/100?random=12',
-      role: 'UI/UX Designer'
+      role: 'UI/UX Designer',
     },
     date: 'March 4, 2024',
-    readTime: '7 min read'
+    readTime: '7 min read',
   },
   {
     id: 13,
     title: 'IoT Dashboard with MQTT',
-    excerpt: 'Building a real-time IoT monitoring system using MQTT and WebSockets...',
+    excerpt:
+      'Building a real-time IoT monitoring system using MQTT and WebSockets...',
     content: `
       <p>Create a scalable IoT dashboard for device monitoring and control.</p>
       <h2>System Architecture</h2>
@@ -99,10 +127,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Robert Chang',
       avatar: 'https://picsum.photos/100/100?random=13',
-      role: 'IoT Specialist'
+      role: 'IoT Specialist',
     },
     date: 'March 3, 2024',
-    readTime: '9 min read'
+    readTime: '9 min read',
   },
   {
     id: 14,
@@ -124,10 +152,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'James Wilson',
       avatar: 'https://picsum.photos/100/100?random=14',
-      role: 'Voice UI Developer'
+      role: 'Voice UI Developer',
     },
     date: 'March 2, 2024',
-    readTime: '8 min read'
+    readTime: '8 min read',
   },
   {
     id: 15,
@@ -149,10 +177,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Nina Rodriguez',
       avatar: 'https://picsum.photos/100/100?random=15',
-      role: 'Creative Developer'
+      role: 'Creative Developer',
     },
     date: 'March 1, 2024',
-    readTime: '6 min read'
+    readTime: '6 min read',
   },
   {
     id: 16,
@@ -174,10 +202,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Dr. Alan Mitchell',
       avatar: 'https://picsum.photos/100/100?random=16',
-      role: 'Quantum Researcher'
+      role: 'Quantum Researcher',
     },
     date: 'February 29, 2024',
-    readTime: '15 min read'
+    readTime: '15 min read',
   },
   {
     id: 17,
@@ -199,10 +227,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Lucas Silva',
       avatar: 'https://picsum.photos/100/100?random=17',
-      role: '3D Web Designer'
+      role: '3D Web Designer',
     },
     date: 'February 28, 2024',
-    readTime: '10 min read'
+    readTime: '10 min read',
   },
   {
     id: 18,
@@ -224,10 +252,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Vitalik Chen',
       avatar: 'https://picsum.photos/100/100?random=18',
-      role: 'Blockchain Developer'
+      role: 'Blockchain Developer',
     },
     date: 'February 27, 2024',
-    readTime: '11 min read'
+    readTime: '11 min read',
   },
   {
     id: 19,
@@ -249,10 +277,10 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Isabella Arte',
       avatar: 'https://picsum.photos/100/100?random=19',
-      role: 'Creative Technologist'
+      role: 'Creative Technologist',
     },
     date: 'February 26, 2024',
-    readTime: '8 min read'
+    readTime: '8 min read',
   },
   {
     id: 20,
@@ -274,16 +302,9 @@ export const blogPosts: BlogPost[] = [
     author: {
       name: 'Maya VR',
       avatar: 'https://picsum.photos/100/100?random=20',
-      role: 'XR Developer'
+      role: 'XR Developer',
     },
     date: 'February 25, 2024',
-    readTime: '13 min read'
-  }
+    readTime: '13 min read',
+  },
 ];
-
-export const categories: Category[] = [
-  { name: 'All', class: 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200' },
-  { name: 'Tech', class: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' },
-  { name: 'Design', class: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' },
-  { name: 'Projects', class: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' }
-]; 

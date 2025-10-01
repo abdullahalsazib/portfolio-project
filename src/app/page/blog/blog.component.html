@@ -25,7 +25,7 @@
   </div>
   <div class="max-w-7xl mx-auto">
     <!-- Filter Tags -->
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-">
       <div class="flex flex-wrap gap-2">
         <button
           *ngFor="let category of categories"
@@ -88,9 +88,9 @@
                 </div>
               </div>
               <div class="md:w-1/3">
-                <div class="h-64 md:h-full relative overflow-hidden">
+                <div class="h-72 md:h-full relative overflow-hidden">
                   <img
-                    src="https://picsum.photos/800/600?random=1"
+                    src="https://res.cloudinary.com/dbxlafemm/image/upload/v1759330397/cc6c08cb-b6ce-4654-ac3c-517e359da857.png"
                     alt="Featured Post"
                     class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
@@ -121,7 +121,7 @@
               class="inline-block px-3 py-1 rounded-full text-sm"
               [ngClass]="{
                 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300':
-                  post.category === 'Tech',
+                  post.category === 'DevOps',
                 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300':
                   post.category === 'Design',
                 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300':
@@ -152,35 +152,6 @@
       </div>
     </div>
 
-    <!-- Newsletter Section -->
-    <div class="container mx-auto px-4 py-16">
-      <div
-        class="relative rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-8 md:p-12"
-      >
-        <div
-          class="absolute inset-0 bg-white dark:bg-gray-800 opacity-10 rounded-2xl"
-        ></div>
-        <div class="relative">
-          <h3 class="text-3xl font-bold text-white mb-4">Stay Updated</h3>
-          <p class="text-white/90 mb-6">
-            Get the latest articles and projects directly in your inbox.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="flex-1 px-6 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/10 text-white placeholder-white/70"
-            />
-            <button
-              class="px-8 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-300"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Modal -->
     <div id="readMoreModal" class="fixed inset-0 z-50 hidden">
       <!-- Overlay -->
@@ -191,13 +162,15 @@
 
       <!-- Modal Content -->
       <div
-        class="fixed bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl top-[10%] left-[10%] lg:left-[20%] right-[10%] lg:right-[20%] bottom-[10%] rounded-xl shadow-2xl overflow-y-auto"
+        class="fixed bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl top-[1%] left-[1%] right-[1%] bottom-[1%] md:top-[10%] md:bottom-[10%] md:left-[10%] md:right-[10%] lg:left-[20%] lg:right-[20%] rounded-xl shadow-2xl overflow-y-auto custom-scroll"
       >
         <!-- Modal Header -->
         <div
-          class="sticky top-0 border-b dark:border-gray-700 p-4 flex justify-between items-center z-10"
+          class="sticky top-0 p-4 flex justify-between items-center z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
         >
-          <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+          <h2
+            class="text-2xl font-bold text-gray-800 dark:text-white capitalize"
+          >
             {{ selectedPost?.title }}
           </h2>
           <button
@@ -221,12 +194,12 @@
         </div>
 
         <!-- Modal Body -->
-        <div class="p-6" *ngIf="selectedPost">
+        <div class="p-6 z-10" *ngIf="selectedPost">
           <!-- Article Image -->
           <img
             [src]="selectedPost.image"
             [alt]="selectedPost.title"
-            class="w-full h-[300px] object-cover rounded-lg mb-6"
+            class="w-full h-[500px] object-cover rounded-lg mb-6"
           />
 
           <!-- Article Content -->
@@ -282,6 +255,31 @@
                   class="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors duration-200"
                 >
                   {{ tag }}
+                </a>
+              </div>
+            </div>
+            <!-- Links or Additional Info -->
+            <div class="mt-8 pt-6 border-t dark:border-gray-700">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">
+                Link
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <a
+                  [href]="selectedPost.liveLink"
+                  target="_blank"
+                  class="px-2 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm hover:bg-purple-200 dark:hover:bg-purple-900/50 duration-200 flex items-center justify-center gap-1 group hover:px-4 transition-all capitalize"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                  <p class="hidden group-hover:block">live</p>
+                </a>
+                <a
+                  [href]="selectedPost.githubLink"
+                  target="_blank"
+                  class="px-2 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm hover:bg-purple-200 dark:hover:bg-purple-900/50 duration-200 flex items-center justify-center gap-1 group hover:px-4 transition-all capitalize"
+                >
+                  <i class="fa-brands fa-github"></i>
+
+                  <p class="hidden group-hover:block">github</p>
                 </a>
               </div>
             </div>

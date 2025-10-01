@@ -16,6 +16,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   featured?: boolean;
+  liveLink?: string;
+  githubLink?: string;
 }
 
 export interface Category {

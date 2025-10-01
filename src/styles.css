@@ -2,3 +2,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* scroll bar theme  */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+/* Common base */
+.custom-scroll {
+  overflow-y: auto;
+  /* margin-bottom: 1px; */
+}
+
+/* Light mode scrollbar */
+.light .custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.light .custom-scroll::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+.light .custom-scroll::-webkit-scrollbar-thumb {
+  background: #dfe1e5;
+  border-radius: 4px;
+}
+.light .custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c5c6c9;
+}
+
+/* Dark mode scrollbar */
+.dark .custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.dark .custom-scroll::-webkit-scrollbar-track {
+  background: #202124;
+  border-radius: 4px;
+}
+.dark .custom-scroll::-webkit-scrollbar-thumb {
+  background: #35363a;
+  border-radius: 4px;
+}
+.dark .custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4a4b4f;
+}
+
+/* Firefox support */
+.light .custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #dfe1e5 #f3f4f6;
+}
+.dark .custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #35363a #202124;
+}

@@ -14,11 +14,12 @@
 
     <div class="container mx-auto max-w-7xl px-4 relative">
       <h1
-        class="text-4xl font-bold text-gray-800 dark:text-white mb-6 animate-fade-in"
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6"
+        [@fadeIn]
       >
         My Creative Journey
       </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-300">
+      <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
         Exploring technology, design, and everything in between
       </p>
     </div>
@@ -26,15 +27,16 @@
   <div class="max-w-7xl mx-auto">
     <!-- Filter Tags -->
     <div class="container mx-auto px-4 py-">
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2" [@staggerFadeIn]>
         <button
           *ngFor="let category of categories"
           (click)="filterPosts(category.name)"
           [class]="
-            'px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 ' +
+            'px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:-translate-y-1 ' +
             category.class
           "
           [class.ring-2]="selectedCategory === category.name"
+          [@fadeInUp]
         >
           {{ category.name }}
         </button>
@@ -43,11 +45,12 @@
 
     <!-- Blog Grid -->
     <div class="container mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" [@staggerFadeIn]>
         <!-- Featured Blog Card -->
         <div
           *ngIf="featuredPost"
           class="col-span-1 md:col-span-2 lg:col-span-3"
+          [@cardAnimation]
         >
           <div
             class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -63,11 +66,11 @@
                   Featured
                 </span>
                 <h2
-                  class="text-2xl font-bold text-gray-800 dark:text-white mb-4"
+                  class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white mb-4"
                 >
                   Building Modern Web Applications
                 </h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                <p class="text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   Exploring the latest trends and technologies in web
                   development...
                 </p>
@@ -104,7 +107,8 @@
         <div
           *ngFor="let post of filteredPosts"
           (click)="toggleModal(post)"
-          class="group bg-white cursor-pointer dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+          class="group bg-white cursor-pointer dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden hover:-translate-y-2"
+          [@cardAnimation]
         >
           <div class="relative h-48 overflow-hidden">
             <img
@@ -130,10 +134,10 @@
             >
               {{ post.category }}
             </span>
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
+            <h3 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white mb-3">
               {{ post.title }}
             </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
               {{ post.excerpt }}
             </p>
             <div class="flex items-center justify-between">
@@ -162,14 +166,14 @@
 
       <!-- Modal Content -->
       <div
-        class="fixed bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl top-[1%] left-[1%] right-[1%] bottom-[1%] md:top-[10%] md:bottom-[10%] md:left-[10%] md:right-[10%] lg:left-[20%] lg:right-[20%] rounded-xl shadow-2xl overflow-y-auto custom-scroll"
+        class="fixed bg-white/90 dark:bg-slate-900/60 backdrop-blur-xl top-[1%] left-[1%] right-[1%] bottom-[1%] md:top-[10%] md:bottom-[10%] md:left-[10%] md:right-[10%] lg:left-[20%] lg:right-[20%] rounded-xl shadow-2xl overflow-y-auto scrollbar-hide"
       >
         <!-- Modal Header -->
         <div
           class="sticky top-0 p-4 flex justify-between items-center z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
         >
           <h2
-            class="text-2xl font-bold text-gray-800 dark:text-white capitalize"
+            class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white capitalize"
           >
             {{ selectedPost?.title }}
           </h2>
@@ -289,3 +293,4 @@
     </div>
   </div>
 </main>
+<app-footer></app-footer>

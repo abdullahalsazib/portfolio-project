@@ -1,1 +1,246 @@
-<p>footer works!</p>
+<footer
+  class="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 border-t border-gray-200 dark:border-gray-700/50 overflow-hidden"
+  [@fadeInUp]
+>
+  <!-- Background Decorative Elements -->
+  <div class="absolute inset-0 opacity-10 dark:opacity-5">
+    <div
+      class="absolute top-0 left-0 w-72 h-72 bg-purple-300 dark:bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl animate-float-slow"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-72 h-72 bg-blue-300 dark:bg-blue-700 rounded-full mix-blend-multiply filter blur-3xl animate-float-delayed"
+    ></div>
+  </div>
+
+  <div class="container mx-auto max-w-7xl px-4 py-12 md:py-16 relative z-10">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12"
+    >
+      <!-- Brand Section -->
+      <div class="lg:col-span-2 text-center md:text-left">
+        <a routerLink="/" class="inline-block mb-4">
+          <h3
+            class="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400"
+          >
+            Abdullah Al Sazib
+          </h3>
+        </a>
+        <p
+          class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 max-w-md mx-auto md:mx-0 leading-relaxed"
+        >
+          Full Stack Developer & Creative Technologist crafting digital
+          experiences with modern technologies.
+        </p>
+        <div
+          class="flex items-center justify-center md:justify-start space-x-2 text-gray-600 dark:text-gray-400 text-sm"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <a
+            href="mailto:mdsazibhossin2021@gmail.com"
+            class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+          >
+            mdsazibhossin2021&#64;gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="text-center md:text-left" [@fadeInUp]>
+        <h4
+          class="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-6 relative inline-block"
+        >
+          Quick Links
+          <span
+            class="absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:transform-none w-12 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600"
+          ></span>
+        </h4>
+        <ul class="space-y-3">
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="text-purple-600 dark:text-purple-400 font-semibold"
+              class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 text-sm flex items-center justify-center md:justify-start group"
+            >
+              <span
+                class="w-0 group-hover:w-2 h-0.5 bg-purple-600 mr-0 group-hover:mr-2 transition-all duration-300"
+              ></span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/about"
+              routerLinkActive="text-purple-600 dark:text-purple-400 font-semibold"
+              class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 text-sm flex items-center justify-center md:justify-start group"
+            >
+              <span
+                class="w-0 group-hover:w-2 h-0.5 bg-purple-600 mr-0 group-hover:mr-2 transition-all duration-300"
+              ></span>
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/projects"
+              routerLinkActive="text-purple-600 dark:text-purple-400 font-semibold"
+              class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 text-sm flex items-center justify-center md:justify-start group"
+            >
+              <span
+                class="w-0 group-hover:w-2 h-0.5 bg-purple-600 mr-0 group-hover:mr-2 transition-all duration-300"
+              ></span>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/contact"
+              routerLinkActive="text-purple-600 dark:text-purple-400 font-semibold"
+              class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 text-sm flex items-center justify-center md:justify-start group"
+            >
+              <span
+                class="w-0 group-hover:w-2 h-0.5 bg-purple-600 mr-0 group-hover:mr-2 transition-all duration-300"
+              ></span>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div class="text-center md:text-left" [@fadeInRight]>
+        <h4
+          class="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-6 relative inline-block"
+        >
+          Connect
+          <span
+            class="absolute -bottom-2 left-1/2 md:left-0 transform -translate-x-1/2 md:transform-none w-12 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600"
+          ></span>
+        </h4>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a
+            href="https://github.com/abdullahalsazib"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+            aria-label="GitHub"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fab fa-github text-xl text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors relative z-10"
+            ></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/abdullah-al-sazib"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/20 dark:hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+            aria-label="LinkedIn"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fab fa-linkedin text-xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10"
+            ></i>
+          </a>
+          <a
+            href="https://www.instagram.com/abdullah_al_sazib"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/20 dark:hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+            aria-label="Instagram"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fab fa-instagram text-xl text-gray-700 dark:text-gray-300 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors relative z-10"
+            ></i>
+          </a>
+          <a
+            href="https://telegram.me/abdullah404sazib"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/20 dark:hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+            aria-label="Telegram"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <i
+              class="fab fa-telegram text-xl text-gray-700 dark:text-gray-300 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors relative z-10"
+            ></i>
+          </a>
+        </div>
+        <div class="mt-6 flex justify-center md:justify-start">
+          <a
+            href="https://discord.com/users/@jack.sparrow_z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white rounded-lg text-sm font-medium transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl hover:shadow-purple-500/50"
+          >
+            <i class="fab fa-discord"></i>
+            Connect on Discord
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-200 dark:border-gray-700/50 my-8"></div>
+
+    <!-- Copyright & Additional Info -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p
+        class="text-gray-600 dark:text-gray-400 text-sm text-center md:text-left"
+      >
+        © {{ currentYear }}
+        <span class="font-semibold text-gray-800 dark:text-white"
+          >Abdullah Al Sazib</span
+        >. All rights reserved.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-gray-600 dark:text-gray-400"
+      >
+        <span class="flex items-center gap-2">
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+            ></path>
+          </svg>
+          <span>Rajshahi, Bangladesh</span>
+        </span>
+        <span class="hidden sm:inline">•</span>
+        <span>Made with <span class="text-red-500">❤️</span> & Angular</span>
+      </div>
+    </div>
+  </div>
+</footer>

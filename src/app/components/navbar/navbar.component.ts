@@ -3,12 +3,14 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavLink } from '../../data/nav-data';
 import { NavLinkInf } from '../../interfaces/nav.interface';
+import { slideInDown, fadeIn, fadeInUp, staggerFadeIn } from '../../animations/animations';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [RouterLink, NgIf, NgClass, RouterLinkActive, NgFor],
   templateUrl: './navbar.component.html',
+  animations: [slideInDown, fadeIn, fadeInUp, staggerFadeIn]
 })
 export class NavbarComponent {
   isMobileMenuOpen = false;

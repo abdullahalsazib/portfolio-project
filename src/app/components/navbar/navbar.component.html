@@ -1,4 +1,4 @@
-<nav class="fixed w-full top-0 z-50 backdrop-blur-xl">
+<nav class="fixed w-full top-0 z-50 backdrop-blur-xl" [@slideInDown]>
   <div class="container max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <button
@@ -9,19 +9,19 @@
       </button>
       <!-- Logo and Brand -->
       <div class="flex items-center">
-        <a routerLink="/" class="text-black dark:text-white font-bold text-2xl"
+        <a routerLink="/" class="text-black dark:text-white font-bold text-xl sm:text-2xl"
           >Abdullah.</a
         >
       </div>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-6">
+      <div class="hidden md:flex items-center space-x-6" [@staggerFadeIn]>
         <ul class="flex items-center justify-center gap-2">
-          <li *ngFor="let item of navlink" class="relative">
+          <li *ngFor="let item of navlink" class="relative" [@fadeIn]>
             <a
               [routerLink]="item.link"
               routerLinkActive="!text-blue-400 "
-              class="text-sm capitalize font-semibold text-gray-600 dark:text-white/50 dark:hover:text-white hover:text-gray-950 duration-300 py-2 px-4"
+              class="text-sm capitalize font-medium text-gray-600 dark:text-white/50 dark:hover:text-white hover:text-gray-950 duration-300 py-2 px-4"
             >
               {{ item.title }}</a
             >
@@ -30,7 +30,7 @@
             href="https://discord.com/users/@jack.sparrow_z"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm font-medium"
+            class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm font-semibold"
           >
             <i class="fab fa-discord text-lg"></i>
             Discord
@@ -64,9 +64,9 @@
     </div>
 
     <!-- Mobile Menu Dropdown -->
-    <div *ngIf="isMobileMenuOpen" class="md:hidden w-full h py-10">
-      <ul class="flex items-center justify-center flex-col gap-10">
-        <li *ngFor="let item of navlink" class="relative">
+    <div *ngIf="isMobileMenuOpen" class="md:hidden w-full h py-10" [@slideInDown]>
+      <ul class="flex items-center justify-center flex-col gap-10" [@staggerFadeIn]>
+        <li *ngFor="let item of navlink" class="relative" [@fadeInUp]>
           <a
             [routerLink]="item.link"
             routerLinkActive="!text-blue-400 "

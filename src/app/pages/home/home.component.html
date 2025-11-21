@@ -52,9 +52,10 @@
     </div>
 
     <!-- Main Content -->
-    <div class="relative z-10 flex flex-col items-center text-center">
+    <div class="relative z-10 flex flex-col items-center text-center" [@fadeIn]>
       <h1
-        class="text-7xl font-bold mb-6 animate-fade-in font-['Playfair_Display'] relative"
+        class="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 relative"
+        [@bounceIn]
       >
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:via-purple-500 dark:to-indigo-500"
@@ -62,45 +63,50 @@
           Abdullah Al Sazib
         </span>
         <span
-          class="absolute -bottom-4 right-0 text-lg font-['Dancing_Script'] italic text-gray-500 dark:text-gray-400 transform rotate-[-5deg]"
+          class="absolute -bottom-4 right-0 text-sm sm:text-base font-medium italic text-gray-500 dark:text-gray-400 transform rotate-[-5deg]"
         >
           Captain Jack Sparrow ☠️
         </span>
       </h1>
       <p
-        class="text-2xl mb-8 text-gray-600 dark:text-gray-300 animate-slide-up"
+        class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-600 dark:text-gray-300 font-medium"
+        [@fadeInUp]
       >
         Web Designer & Developer
       </p>
 
       <!-- Animated Tech Stack -->
-      <div class="flex gap-6 mb-12 animate-fade-in-delayed">
+      <div class="flex gap-6 mb-12" [@staggerFadeIn]>
         <i
           class="devicon-html5-plain text-4xl hover:text-orange-500 transition-colors"
+          [@fadeInUp]
         ></i>
         <i
           class="devicon-css3-plain text-4xl hover:text-blue-500 transition-colors"
+          [@fadeInUp]
         ></i>
         <i
           class="devicon-javascript-plain text-4xl hover:text-yellow-400 transition-colors"
+          [@fadeInUp]
         ></i>
         <i
           class="devicon-angularjs-plain text-4xl hover:text-cyan-400 transition-colors"
+          [@fadeInUp]
         ></i>
       </div>
 
       <!-- CTA Buttons -->
-      <div class="flex gap-4">
+      <div class="flex gap-4" [@fadeInUp]>
         <a
           routerLink="/projects"
-          class="px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors animate-bounce-slow"
+          class="px-8 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-all hover:scale-105 transform"
         >
           View Projects
         </a>
         <a
           href="https://linkedin.com/in/abdullah-al-sazib"
           target="_blank"
-          class="px-8 py-3 border-2 border-purple-600 text-purple-600 dark:text-white rounded-full hover:bg-purple-600/20 transition-colors"
+          class="px-8 py-3 border-2 border-purple-600 text-purple-600 dark:text-white rounded-full hover:bg-purple-600/20 transition-all hover:scale-105 transform"
         >
           Contact Me
         </a>
@@ -111,6 +117,7 @@
   <!-- Social Media Sidebar -->
   <div
     class="fixed right-8 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 z-20"
+    [@fadeInRight]
   >
     <!-- <a href="https://www.facebook.com/abdullahalsazib22" target="_blank" rel="noopener noreferrer"
             class="text-2xl text-gray-600 hover:text-purple-500 dark:text-white dark:hover:text-purple-500 transition-colors">
@@ -151,7 +158,7 @@
   </div>
 
   <!-- Bottom Corner Decorative Elements -->
-  <div class="fixed left-0 bottom-0 z-10 opacity-30">
+  <div class="fixed left-0 bottom-0 z-10 opacity-30" [@fadeIn]>
     <div class="animate-float-slow transform rotate-12">
       <i
         class="fas fa-star text-4xl text-purple-500 absolute bottom-8 left-8"
@@ -165,7 +172,7 @@
     </div>
   </div>
 
-  <div class="fixed right-0 bottom-0 z-10 opacity-30">
+  <div class="fixed right-0 bottom-0 z-10 opacity-30" [@fadeIn]>
     <div class="animate-float-slow transform -rotate-12">
       <i
         class="far fa-paper-plane text-4xl text-purple-500 absolute bottom-8 right-8 -rotate-45"

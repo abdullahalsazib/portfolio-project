@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { routeAnimations, fadeIn } from './animations/animations';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [RouterOutlet, NavbarComponent],
   template: `
     <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
+    <div [@routeAnimations]>
+      <router-outlet></router-outlet>
+    </div>
   `,
+  animations: [routeAnimations, fadeIn]
 })
 export class AppComponent {
   title = 'Portfolio - Abdullah Al Sazib';

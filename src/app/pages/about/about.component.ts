@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { skillCategories, additionalSkills, SkillCategory, AdditionalSkill } from '../../data/skills-data';
+import { fadeIn, fadeInUp, fadeInDown, fadeInLeft, fadeInRight, scaleIn, scaleInCenter, cardAnimation, staggerFadeIn, progressAnimation } from '../../animations/animations';
 declare var AOS: any;
 
 @Component({
@@ -11,6 +12,7 @@ declare var AOS: any;
   imports: [NgFor, NgIf, RouterLink, NgClass, FooterComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
+  animations: [fadeIn, fadeInUp, fadeInDown, fadeInLeft, fadeInRight, scaleIn, scaleInCenter, cardAnimation, staggerFadeIn, progressAnimation]
 })
 export class AboutComponent implements OnInit {
   email: string = 'mdsazibhossin2021@gmail.com';

@@ -15,13 +15,14 @@
   <!-- Main Content Container -->
   <div class="container mx-auto max-w-7xl relative pt-20 z-10">
     <!-- Section Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" [@fadeInDown]>
       <h1
-        class="text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white mb-4"
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4"
+        [@fadeInUp]
       >
         Get in Touch
       </h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" [@fadeIn]>
         Have a question or want to work together? I'd love to hear from you.
       </p>
     </div>
@@ -29,7 +30,7 @@
     <!-- Contact Grid -->
     <div class="grid lg:grid-cols-2 gap-12 items-start">
       <!-- Contact Information -->
-      <div class="space-y-8">
+      <div class="space-y-8" [@fadeInLeft]>
         <!-- Quick Contact Cards -->
         <div class="grid grid-rows-2 gap-4">
           <!-- Email Card -->
@@ -58,7 +59,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">
                   Email
                 </h3>
                 <a
@@ -94,7 +95,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+                <h3 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-white">
                   Phone
                 </h3>
                 <a
@@ -191,6 +192,7 @@
       <!-- Contact Form -->
       <div
         class="bg-white dark:bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700/50"
+        [@fadeInRight]
       >
         <form class="space-y-6" (ngSubmit)="onSubmit()" #contactForm="ngForm">
           <!-- Name Input -->

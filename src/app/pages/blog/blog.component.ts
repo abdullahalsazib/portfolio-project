@@ -6,13 +6,15 @@ import { NgClass } from '@angular/common';
 import { blogPosts, categories } from '../../data/blog-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { fadeIn, fadeInUp, scaleIn, cardAnimation, staggerFadeIn } from '../../animations/animations';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
   imports: [NgIf, NgFor, NgClass, FooterComponent],
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  styleUrls: ['./blog.component.css'],
+  animations: [fadeIn, fadeInUp, scaleIn, cardAnimation, staggerFadeIn]
 })
 export class BlogComponent implements OnInit {
   selectedCategory: string = 'All';

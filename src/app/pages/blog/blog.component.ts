@@ -5,10 +5,12 @@ import { NgIf } from '@angular/common';
 import { NgClass } from '@angular/common';
 import { blogPosts, categories } from '../../data/blog-data';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-blog',
-  imports: [NgIf, NgFor, NgClass],
+  standalone: true,
+  imports: [NgIf, NgFor, NgClass, FooterComponent],
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })

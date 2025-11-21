@@ -1,6 +1,7 @@
 import { NgFor, NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { FooterComponent } from '../../components/footer/footer.component';
 declare var AOS: any;
 
 interface Skill {
@@ -15,7 +16,8 @@ interface AdditionalSkill {
 
 @Component({
   selector: 'app-about',
-  imports: [NgFor, RouterLink, NgClass],
+  standalone: true,
+  imports: [NgFor, RouterLink, NgClass, FooterComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })

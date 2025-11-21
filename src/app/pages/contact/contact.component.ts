@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 interface ContactForm {
   name: string;
@@ -10,7 +11,8 @@ interface ContactForm {
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  standalone: true,
+  imports: [FormsModule, FooterComponent],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })

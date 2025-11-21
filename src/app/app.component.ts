@@ -9,8 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   template: `
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
-  `
+  `,
 })
 export class AppComponent {
-  title = 'my-single-page-app';
+  title = 'Portfolio - Abdullah Al Sazib';
 }

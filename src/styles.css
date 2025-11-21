@@ -17,6 +17,15 @@ html {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* GPU acceleration for smooth animations */
+.smooth-transform {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Enhanced animation classes */
@@ -36,8 +45,34 @@ html {
 }
 
 /* Smooth transitions for all interactive elements */
-a, button {
+a, button, input, textarea, select {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Enhanced smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Smooth focus states */
+*:focus {
+  outline: none;
+  transition: all 0.2s ease-out;
+}
+
+*:focus-visible {
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
 }
 
 /* Page transition styles */
@@ -109,4 +144,54 @@ body::-webkit-scrollbar {
 .dark .custom-scroll {
   scrollbar-width: thin;
   scrollbar-color: #35363a #202124;
+}
+
+/* Smooth button hover effects */
+button, .btn, a[role="button"] {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+button::before, .btn::before, a[role="button"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before, .btn:hover::before, a[role="button"]:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Smooth card hover effects */
+.card, [class*="card"], [class*="Card"] {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth image transitions */
+img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Smooth backdrop blur transitions */
+[class*="backdrop-blur"] {
+  transition: backdrop-filter 0.3s ease-in-out;
+}
+
+/* Smooth gradient transitions */
+[class*="gradient"] {
+  transition: background 0.5s ease-in-out;
 }

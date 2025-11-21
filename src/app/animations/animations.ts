@@ -14,14 +14,14 @@ import {
 export const fadeIn = trigger('fadeIn', [
   transition(':enter', [
     style({ opacity: 0 }),
-    animate('600ms ease-out', style({ opacity: 1 })),
+    animate('800ms cubic-bezier(0.4, 0, 0.2, 1)', style({ opacity: 1 })),
   ]),
 ]);
 
 export const fadeInUp = trigger('fadeInUp', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateY(30px)' }),
-    animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
+    animate('800ms cubic-bezier(0.4, 0, 0.2, 1)', style({ opacity: 1, transform: 'translateY(0)' })),
   ]),
 ]);
 
@@ -146,11 +146,14 @@ export const routeAnimations = trigger('routeAnimations', [
         left: 0,
         width: '100%',
         opacity: 0,
-        transform: 'scale(0.8)',
+        transform: 'scale(0.95) translateY(20px)',
       }),
     ], { optional: true }),
+    query(':leave', [
+      animate('400ms cubic-bezier(0.4, 0, 0.2, 1)', style({ opacity: 0, transform: 'scale(0.95) translateY(-20px)' })),
+    ], { optional: true }),
     query(':enter', [
-      animate('600ms ease', style({ opacity: 1, transform: 'scale(1)' })),
+      animate('600ms cubic-bezier(0.4, 0, 0.2, 1)', style({ opacity: 1, transform: 'scale(1) translateY(0)' })),
     ], { optional: true }),
   ]),
 ]);
@@ -158,8 +161,8 @@ export const routeAnimations = trigger('routeAnimations', [
 // Card animations
 export const cardAnimation = trigger('cardAnimation', [
   transition(':enter', [
-    style({ opacity: 0, transform: 'translateY(30px) scale(0.9)' }),
-    animate('600ms cubic-bezier(0.34, 1.56, 0.64, 1)', style({ opacity: 1, transform: 'translateY(0) scale(1)' })),
+    style({ opacity: 0, transform: 'translateY(30px) scale(0.9) rotateX(10deg)' }),
+    animate('700ms cubic-bezier(0.34, 1.56, 0.64, 1)', style({ opacity: 1, transform: 'translateY(0) scale(1) rotateX(0deg)' })),
   ]),
 ]);
 
